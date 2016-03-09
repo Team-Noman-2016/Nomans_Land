@@ -9,3 +9,6 @@ When making changes:
   5. Merge your branch with the Master branch.
 
 If you need someone elses work to do your own, both of you should work in the same branch so you can update on the fly and use the other persons code without waiting for them to update the master branch.
+
+TIP: To pull updates to your branch, do a pull request, but put your branch first and compare it to the master.
+    To merge with the master put the master first and your branch second.
