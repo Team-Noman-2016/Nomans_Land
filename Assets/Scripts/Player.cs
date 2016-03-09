@@ -87,9 +87,6 @@ public class Player : MonoBehaviour
         if (playerStats.Health <= 0)
         {
             Debug.Log("PLAYER DEAD");
-
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
         }
     }
 

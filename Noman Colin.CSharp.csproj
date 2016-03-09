@@ -69,18 +69,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Booleans\BoolSet.cs" />
-    <Compile Include="Assets\Scripts\Booleans\boolCheck.cs" />
-    <Compile Include="Assets\Scripts\Inventory\InventoryOperator.cs" />
-    <Compile Include="Assets\Scripts\Inventory\InventoryUse.cs" />
-    <Compile Include="Assets\Scripts\KillSwitch\Switch.cs" />
-    <Compile Include="Assets\Scripts\KillSwitch\bossHealth.cs" />
+    <Compile Include="Assets\Enemy.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\Booleans\BoolSet.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\Booleans\boolCheck.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\Inventory\InventoryOperator.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\Inventory\InventoryUse.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\KillSwitch\Switch.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\KillSwitch\bossHealth.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\Spike\SpikeArea.cs" />
+    <Compile Include="Assets\Scripts\AdvancedMechanics\Spike\SpikeFall.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Menu\LevelBlock.cs" />
+    <Compile Include="Assets\Scripts\Menu\Open.cs" />
+    <Compile Include="Assets\Scripts\Menu\Selection.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Spike\SpikeArea.cs" />
-    <Compile Include="Assets\Scripts\Spike\SpikeFall.cs" />
+    <Compile Include="Assets\Scripts\ResizePlayer.cs" />
+    <Compile Include="Assets\Scripts\TimeManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\txt\Enemy.cs.txt" />
     <None Include="Assets\txt\Player.cs.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
