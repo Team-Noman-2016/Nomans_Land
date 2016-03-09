@@ -1,0 +1,64 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Player : MonoBehaviour
+{
+
+public class PlayerStats
+    {
+        public int Health = 100;
+    }
+
+    public PlayerStats playerStats = new PlayerStats();
+
+    public void DamagePlayer(int damage)
+    {
+        playerStats.Health -= damage;
+        if (playerStats.Health <= 0)
+        {
+            Debug.Log("PLAYER DEAD");
+        }
+    }
+
+    private Rigidbody2D myRigidBody;
+
+    private Animator myAnimator;
+
+    [SerializeField]
+    private float movementSpeed;
+
+    private bool facingRight;
+
+	// Use this for initialization
+	void Start ()
+    {
+        facingRight = true;
+        myRigidBody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+    }
+	
+	// Update is called once per frame
+	void FixedUpdate ()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        HandleMovement(horizontal);
+        Flip(horizontal);
+	}
+
+    private void HandleMovement(float horizontal)
+    {
+        myRigidBody.velocity = new Vector2(horizontal * movementSpeed, myRigidBody.velocity.y);
+        myAnimator.SetFloat("speed", Mathf.Abs(horizontal));
+    }
+
+    private void Flip(float horizontal)
+    {
+        if (horizontal > 0 && !facingRight || horizontal < 0  && facingRight)
+        {
+            facingRight = !facingRight;
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
+    }
+}
