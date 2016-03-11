@@ -102,7 +102,7 @@ public class ResizePlayer : MonoBehaviour
         {
             if (newSize < 5)
             {
-                newSize++;
+                newSize += 2;
                 isResizing = true;
             }
         }
@@ -110,7 +110,7 @@ public class ResizePlayer : MonoBehaviour
         {
             if (newSize > 1)
             {
-                newSize--;
+                newSize -= 2;
                 isResizing = true;
             }
         }
@@ -122,7 +122,7 @@ public class ResizePlayer : MonoBehaviour
     {
         if (isResizing)
         {
-            if (resizeCounter < 1.0f)
+            if (resizeCounter < 2.0f)
             {
                 resizeCounter += RESIZE_RATE;
 
