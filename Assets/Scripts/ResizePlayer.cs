@@ -85,7 +85,7 @@ public class ResizePlayer : MonoBehaviour
 
         playerSize = 3;
 
-        transform.localScale = new Vector3(playerSize - 0.05f, playerSize - 0.05f, 1);
+        transform.localScale = new Vector3(playerSize, playerSize, 1);
     }
 
 
